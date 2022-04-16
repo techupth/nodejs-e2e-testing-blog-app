@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: hsl(0, 60%, 20%);
+  --secondary-color: hsl(0, 60%, 35%);
+  --highlight-color: antiquewhite;
+
+  --text-primary-color: var(var(--primary-color));
+
+  --muted-color-100: azure;
+  --muted-color-200: rgb(166, 202, 202);
+}
+
+body {
+  font-family: kanit;
+  padding: 50px;
+  background-color: var(--muted-color-100);
+}
+
+.app-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.app-wrapper .app-title {
+  font-size: 60px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.search-box-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.post {
+  position: relative;
+  background-color: var(--highlight-color);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.post h1,
+.post h2 {
+  margin-bottom: 10px;
+}
+
+.message-text-input {
+  margin-bottom: 30px;
+}
+
+.message-input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.message-input-container input {
+  margin-right: 30px;
+}
+
+.board .post {
+  margin-bottom: 30px;
+}
+
+.post-actions {
+  display: flex;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+}
+
+.pagination .previous-button {
+  margin-right: 10px;
+}
+
+.view-post-container {
+  border: 5px solid var(--secondary-color);
+  padding: 30px;
+  background: var(--highlight-color);
+  margin: 30px 0;
+}
+
+.no-blog-posts-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.view-button,
+.edit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  width: 150px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.delete-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -30px;
+  top: -10px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* form styles */
+input,
+select {
+  font-family: kanit;
+  border-radius: 30px;
+  padding: 20px;
+  height: 85px;
+  width: 500px;
+  outline: none;
+  border: 5px solid var(--secondary-color);
+  font-size: 30px;
+  color: var(--primary-color);
+  margin-left: 20px;
+}
+
+select {
+  padding: 0px 20px;
+  width: 450px;
+}
+
+textarea {
+  font-family: kanit;
+  border-radius: 30px;
+  outline: none;
+  border: 5px solid var(--secondary-color);
+  font-size: 30px;
+  color: var(--primary-color);
+  margin-left: 20px;
+  padding: 20px;
+}
+
+textarea::placeholder {
+  font-family: kanit;
+  color: var(--muted-color-200);
+}
+
+input::placeholder {
+  font-family: kanit;
+  color: var(--muted-color-200);
+}
+
+.input-container {
+  margin-bottom: 10px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+}
+
+.post-form,
+.login-form,
+.register-form {
+  border: 5px solid var(--secondary-color);
+  padding: 30px;
+  margin: 30px 0;
+  background: var(--highlight-color);
+}
+
+.login-form-container,
+.register-form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  width: 50%;
+}
+
+.register-form {
+  width: 60%;
+}
+
+form h1 {
+  margin-bottom: 20px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* general elements */
+button {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  border-radius: 30px;
+  padding: 20px;
+  width: 256px;
+  color: white;
+  font-size: 30px;
+  outline: none;
+  border: 5px solid var(--secondary-color);
+}
