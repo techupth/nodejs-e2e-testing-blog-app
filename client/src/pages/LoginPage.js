@@ -4,7 +4,7 @@ import { useAuth } from "../contexts/authentication";
 function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const { login } = useAuth();
+  const { login, state } = useAuth();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -48,7 +48,7 @@ function LoginPage() {
             />
           </label>
         </div>
-
+        {state.error && <h1 className="error-message">Error: {state.error}</h1>}
         <div className="form-actions">
           <button type="submit">Login</button>
         </div>

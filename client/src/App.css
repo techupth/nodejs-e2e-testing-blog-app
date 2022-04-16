@@ -195,6 +195,10 @@ label {
   justify-content: center;
 }
 
+.error-message {
+  color: crimson;
+}
+
 .login-form {
   width: 50%;
 }

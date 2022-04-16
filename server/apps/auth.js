@@ -42,7 +42,7 @@ authRouter.post("/login", async (req, res) => {
   );
 
   if (!isValidPassword) {
-    return res.status(401).json({
+    return res.status(400).json({
       message: "password not valid",
     });
   }
