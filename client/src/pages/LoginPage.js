@@ -50,7 +50,9 @@ function LoginPage() {
         </div>
         {state.error && <h1 className="error-message">Error: {state.error}</h1>}
         <div className="form-actions">
-          <button type="submit">Login</button>
+          <button className="login-button" type="submit">
+            Login
+          </button>
         </div>
       </form>
     </div>
