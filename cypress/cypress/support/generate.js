@@ -1,4 +1,4 @@
-import { build, fake } from "test-data-bot";
+import { build, fake, oneOf } from "test-data-bot";
 
 const buildUser = build("User").fields({
   username: fake((f) => f.internet.userName()),
@@ -7,4 +7,10 @@ const buildUser = build("User").fields({
   lastName: fake((f) => f.name.lastName()),
 });
 
-export { buildUser };
+const buildPost = build("Post").fields({
+  title: fake((f) => f.lorem.sentence(1)),
+  content: fake((f) => f.lorem.sentence(5)),
+  status: oneOf("published", "draft", "archived"),
+});
+
+export { buildUser, buildPost };
