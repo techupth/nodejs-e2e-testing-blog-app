@@ -14,12 +14,18 @@ postRouter.get("/", async (req, res) => {
   const PAGE_SIZE = 5;
   const skip = PAGE_SIZE * (page - 1);
 
-  const query = {};
+  let query = {};
 
-  if (status) {
-    query.status = status;
+  if (status && keywords) {
+    query = {
+      $and: [{ status: status }, { title: new RegExp(`${keywords}`, "i") }],
+    };
   } else if (keywords) {
-    query.title = new RegExp(`${keywords}`, "i");
+    query = { title: new RegExp(`${keywords}`, "i") };
+  } else if (status) {
+    query = { status: status };
+  } else {
+    query = {};
   }
 
   const collection = db.collection("posts");
